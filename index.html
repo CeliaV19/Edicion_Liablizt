@@ -10,53 +10,87 @@
 <body>
 
     <header>
-        <h1>Liablizt Edition</h1>
-        <p>Editora de video para YouTube y redes sociales</p>
+        <nav id="main-nav">
+            <a href="#intro" class="nav-link">Inicio</a>
+            <a href="#youtube" class="nav-link">YouTube</a>
+            <a href="#twitch" class="nav-link">Twitch</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+        <h1 class="site-title">Liablizt Edition</h1>
+        <p class="site-subtitle">Editora de video para YouTube y redes sociales</p>
     </header>
 
     <main>
-        <section id="freeTrialSection">
-            <h2>Prueba Gratuita - Limitada</h2>
-            <p>¿Quieres ver la calidad de mi trabajo? Ofrezco una **prueba gratuita** de un video de entre 5 y 7 minutos para los **dos primeros que confíen en mí**.</p>
-            <p>¡No pierdas esta oportunidad!</p>
-            <button id="showPricingButton" class="cta-button">Ver todas las tarifas</button>
+        <section id="intro">
+            <p class="intro-text">
+                ¡Hola! Soy Liablizt, tu editora de confianza. Me especializo en darle a tu contenido ese toque profesional y personal que lo hará destacar. ¡Hagamos que tus ideas cobren vida!
+            </p>
+            <section id="freeTrialSection">
+                <h2>Prueba Gratuita - Limitada</h2>
+                <p>Para los **dos primeros clientes**, ofrezco una **prueba gratuita** de un video de 5 a 7 minutos. Es la oportunidad perfecta para que veas la calidad de mi trabajo sin compromiso.</p>
+                <button id="showPricingButton" class="cta-button">Ver tarifas completas</button>
+            </section>
         </section>
 
-        <section id="pricingMenu" class="hidden">
-            <h2>Nuestros Precios y Servicios</h2>
-            <div class="servicio-card">
-                <h3>Precios por video</h3>
-                <ul>
-                    <li>Videos de más de 15 minutos: 15€</li>
-                    <li>Videos de menos de 15 minutos: 10€</li>
-                    <li>Shorts / TikTok: 3€ por cada uno</li>
-                </ul>
-            </div>
-            <div class="servicio-card">
-                <h3>Miniaturas</h3>
-                <p>Miniaturas profesionales para tus videos: 5€ cada una.</p>
-            </div>
-            <div class="servicio-card paquete-mensual">
-                <h3>Paquete Mensual</h3>
-                <p>Por 100€ al mes, obtén:</p>
-                <ul>
-                    <li>Miniaturas para cada video</li>
-                    <li>Edición de 1 video por semana</li>
-                    <li>3 Shorts o TikToks por cada video subido</li>
-                </ul>
-                <p class="nota-adicional">Si se añade algún producto más, se aplicarán los precios iniciales.</p>
+        <section id="youtube" class="pricing-section hidden">
+            <h2>Tarifas de Edición para YouTube</h2>
+            <p class="section-description">Aquí te presento las tarifas más comunes para que empieces a crecer en YouTube. ¡Echa un vistazo a lo que podemos crear juntos!</p>
+
+            <div class="pricing-container">
+                <div class="servicio-card">
+                    <h3>Edición por Video</h3>
+                    <p class="price-list">Videos de +15 min: **15€**</p>
+                    <p class="price-list">Videos de -15 min: **10€**</p>
+                    <p class="price-list">Shorts / TikToks: **3€** por cada uno</p>
+                </div>
+
+                <div class="servicio-card">
+                    <h3>Miniaturas</h3>
+                    <p>Miniaturas profesionales y atractivas para tus videos: **5€** cada una.</p>
+                </div>
+
+                <div class="servicio-card paquete-mensual">
+                    <h3>Paquete Mensual (100€)</h3>
+                    <p>Ideal si subes contenido con frecuencia. Por **100€ al mes**, este paquete incluye:</p>
+                    <ul>
+                        <li>Miniaturas para todos tus videos</li>
+                        <li>Edición de **un video a la semana**</li>
+                        <li>**Dos Shorts o TikToks** por cada video subido</li>
+                    </ul>
+                    <p class="note">Los precios iniciales aplican si necesitas servicios adicionales.</p>
+                </div>
+                
+                <div class="servicio-card special-package">
+                    <h3>Paquete Básico (50€)</h3>
+                    <p>Perfecto para empezar. Por **50€ al mes**, obtén:</p>
+                    <ul>
+                        <li>Edición de **dos videos largos** al mes</li>
+                        <li>Sus correspondientes miniaturas</li>
+                    </ul>
+                </div>
             </div>
         </section>
-        
-        <section id="portafolio">
-            <h2>Mi Portafolio</h2>
-            <p>Próximamente, mis trabajos más recientes.</p>
+
+        <section id="twitch" class="pricing-section hidden">
+            <h2>Servicios de Configuración para Twitch</h2>
+            <p class="section-description">Si quieres profesionalizar tu canal, puedo ayudarte con la configuración completa. ¡Transmite con un estilo único!</p>
+            <div class="pricing-container">
+                <div class="servicio-card">
+                    <h3>Configuración Completa del Canal</h3>
+                    <p>Por solo **20€**, configuro tu canal con:</p>
+                    <ul>
+                        <li>Alertas de suscripción, donación, etc.</li>
+                        <li>Pantallas de inicio, fin y de cambio</li>
+                        <li>Diseño de botones y paneles</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>¿Listo para trabajar juntos? ¡Escríbeme!</p>
-            <form id="contactForm">
+            <h2>Hablemos de tu proyecto</h2>
+            <p class="section-description">¿Listo para dar el siguiente paso? Escríbeme y cuéntame qué tienes en mente. ¡Te responderé lo antes posible!</p>
+            <form id="contactForm" action="https://formspree.io/f/mgvlbgdz" method="POST">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -69,8 +103,7 @@
                 <button type="submit">Enviar</button>
             </form>
             <div class="contact-info">
-                <p>O si lo prefieres, escríbeme directamente a:</p>
-                <p><a href="mailto:liablizt.edition@gmail.com">liablizt.edition@gmail.com</a></p>
+                <p>O si lo prefieres, escríbeme directamente a: <a href="mailto:liablizt.edition@gmail.com">liablizt.edition@gmail.com</a></p>
             </div>
         </section>
     </main>
