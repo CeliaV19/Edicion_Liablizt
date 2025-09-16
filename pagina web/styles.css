@@ -1,0 +1,217 @@
+/* Importamos la fuente Montserrat de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Paleta de colores */
+:root {
+    --purple-dark: #1e0a2e; /* Un morado más oscuro y profundo */
+    --purple-medium: #3c135c;
+    --purple-light: #7a3aab;
+    --purple-glow: #c694f9; /* Un morado vibrante para los brillos */
+    --text-color-light: #e0e0e0; /* Blanco suave */
+    --text-color-strong: #fff; /* Blanco puro para títulos */
+    --background-color: #1a0827;
+}
+
+/* Animación de luces para el fondo */
+@keyframes glow-pulse {
+    0% { box-shadow: 0 0 10px var(--purple-glow); }
+    50% { box-shadow: 0 0 20px var(--purple-glow), 0 0 30px var(--purple-light); }
+    100% { box-shadow: 0 0 10px var(--purple-glow); }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif; /* Usamos la nueva fuente */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color-light);
+    animation: glow-pulse 3s infinite alternate;
+}
+
+header {
+    background: var(--purple-medium);
+    color: var(--text-color-strong);
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--purple-light);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background: var(--purple-medium);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    border: 1px solid var(--purple-light);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Efecto de elevación suave */
+}
+
+section h2 {
+    text-align: center;
+    color: var(--purple-glow);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px var(--purple-glow);
+}
+
+/* Ocultamos el menú de precios */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos del botón principal */
+.cta-button {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    background-color: var(--purple-light);
+    color: var(--text-color-strong);
+    font-size: 1.2rem;
+    font-weight: 600; /* Un poco más de grosor */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--purple-medium);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para las tarjetas de servicios */
+.servicio-card {
+    background: var(--purple-dark);
+    border: 1px solid var(--purple-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.servicio-card:hover {
+    transform: translateY(-3px); /* Efecto de elevación sutil */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.servicio-card h3 {
+    color: var(--purple-light);
+    text-shadow: 0 0 3px var(--purple-light);
+}
+
+.paquete-mensual {
+    background: #2a0e44;
+    border-color: var(--purple-glow);
+    box-shadow: 0 0 10px var(--purple-glow);
+}
+
+.nota-adicional {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #777;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--purple-glow);
+}
+
+form input, form textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--purple-light);
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--purple-dark);
+    color: var(--text-color-light);
+}
+
+form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background: var(--purple-light);
+    color: var(--text-color-strong);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background: var(--purple-medium);
+}
+
+.contact-info a {
+    color: var(--purple-glow);
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--purple-glow);
+    transition: text-shadow 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-shadow: 0 0 10px var(--purple-glow);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: #aaa;
+    border-top: 1px solid var(--purple-medium);
+}
